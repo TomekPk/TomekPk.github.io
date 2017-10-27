@@ -17,6 +17,16 @@
 
   <style>
 
+  .red{
+      color:red;
+      }
+  .form-area
+  {
+    background-color: #FAFAFA;
+  	padding: 10px 40px 60px;
+  	margin: 10px 0px 60px;
+  	border: 1px solid GREY;
+  	}
 
   </style>
 
@@ -29,6 +39,28 @@ $(document).ready(function() {
   });
 });
 
+
+</script>
+<script>
+<!-- Źrodło: https://bootsnipp.com/snippets/featured/simple-contact-form -->
+$(document).ready(function(){
+    $('#characterLeft').text('1000 liter pozostalo');
+    $('#message').keydown(function () {
+        var max = 1000;
+        var len = $(this).val().length;
+        if (len >= max) {
+            $('#characterLeft').text('Wpisano maksymalna ilosc liter.');
+            $('#characterLeft').addClass('red');
+            $('#btnSubmit').addClass('disabled');
+        }
+        else {
+            var ch = max - len;
+            $('#characterLeft').text(ch + ' liter pozostalo');
+            $('#btnSubmit').removeClass('disabled');
+            $('#characterLeft').removeClass('red');
+        }
+    });
+});
 
 </script>
 </head>
@@ -56,11 +88,11 @@ $(document).ready(function() {
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.php">Home</a></li>
+                  <li ><a href="index.php">Home</a></li>
                   <li><a href="about.php">About</a></li>
                   <li><a href="#portfolio">Portfolio</a></li>
                   <li><a href="#">Blog</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
+                  <li class="active"><a href="kontakt.html">Kontakt</a></li>
               </ul>
 
           </div>
@@ -69,7 +101,7 @@ $(document).ready(function() {
 
 <!-- USE GRID instead of table-cell -->
 
-  <div class="parallax-1">
+  <div class="parallax-3">
 
     <div class="container-fluid">
 
@@ -92,7 +124,7 @@ $(document).ready(function() {
   </div>
 
 
-<div class="content1">
+<div class="content4">
 <div style="  background-color: rgba(0, 0, 0, 0.5); width:100%; padding-left: 10%;
 padding-right: 10%;">
 
@@ -101,7 +133,7 @@ padding-right: 10%;">
 
       <div class="information_center">
         <span class="information_text">
-         BEZPIECZEŃSTWO
+         KONTAKT
        </span>
       </div>
 
@@ -109,111 +141,50 @@ padding-right: 10%;">
 
 
     <div class="content_txt">
-      <p>
-        W celu poprawy bezpieczeństwa wprowadzamy wewnętrzne procedury, które tworzą Standardy
-        Bezpieczeństwa Naszej Firmy na drodze. Obowiązują one wszystkich pracowników, którzy
-        wykorzystują jakikolwiek pojazd dla celów
-        działalności firmy. Zapewnienie bezpieczeństwa transportu drogowego w naszej firmie jest
-        zagadnieniem kluczowym. Przywiązujemy dużą wagę do jakości pracy kierowców i ich kultury
-        osobistej, dlatego poprzez cykliczne szkolenia stale podnosimy poziom ich wiedzy i fachowości.
 
-      </p><br />
-      </h4>
 
-      <p> Nasza firma posiada aktualne ubezpieczenia:</p>
-      <ul class="content1_list ">
-        <a href="#" target="_blank">
-        <li>
+      <div class="container">
+<div class="col-md-10">
+    <div class="form-area">
+        <form role="form">
+        <br style="clear:both">
+            <h3 style="margin-bottom: 25px; text-align: center;">Formularz Kontaktowy</h3>
+    				<div class="form-group">
+  						<input type="text" class="form-control" id="name" name="name" placeholder="Imie lub pseudonim" required>
+  					</div>
+  					<div class="form-group">
+  						<input type="text" class="form-control" id="email" name="email" placeholder="Adres Email" required>
+    					</div>
+  					<div class="form-group">
+  						<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Numer kontaktowy" required>
+  					</div>
+  					<div class="form-group">
+  						<input type="text" class="form-control" id="subject" name="subject" placeholder="Temat" required>
+  					</div>
+            <div class="form-group">
+            <textarea class="form-control" type="textarea" id="message" placeholder="Zostaw wiadomość" maxlength="500" rows="7"></textarea>
+                <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
+            </div>
 
-            <p><span class="glyphicon glyphicon-paperclip"></span>
-              Ubezpieczenie OC przewoźnika w transporcie krajowym/międzynarodowym.
-
-          </p>
-        </li></a>
-        <a href="#">
-        <li>
-
-            <p><span class="glyphicon glyphicon-paperclip"></span>
-            Ubezpieczenie mienia w transporcie krajowym (CARGO) oraz międzynarodowym (CARGO ICC)
-          </p>
-        </li></a>
-        <a href="#">
-        <li>
-
-            <p><span class="glyphicon glyphicon-paperclip"></span>
-
-            Ubezpieczenie OC spedytora
-          </p>
-        </li></a>
-      </ul>
+            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">WYŚLIJ</button>
+        </form>
+    </div>
+</div>
+</div>
 
     </div>
 </div>
 </div>
 
 
-  <div class="parallax-2">
 
-  </div>
-  <div class="content2">
-    <div style="  background-color: rgba(0, 0, 0, 0.5); width:100%; padding-left: 10%;
-    padding-right: 10%;">
-    <div class="information_center">
-      <span class="information_text">
-       WYGODA i JAKOŚĆ
-     </span>
-    </div>
-    <div class="content_txt">
-      <p>
-        Nasza spolka zajmuje się krajowym i międzynarodowym transportem gazu propan-butan, paliw płynnych,
-         chemii oraz płynnych artykułów spożywczych cysternami wyposażonymi w nowoczesne systemy
-         rozładunkowe. Ponadto specjalizujemy się w transporcie gazów technicznych w zbiornikach
-         ciśnieniowych. Naszą domeną działania jest specjalistyczny krajowy i międzynarodowy transport
-          materiałów niebezpiecznych (ADR). W tym zakresie jesteśmy ekspertami i gwarantujemy naszym
-          Klientom najwyższą jakość  przewozu, oraz bezpieczeństwo powierzonego towaru.
-          Posiadany nowoczesny tabor i wysoko wykwalifikowana kadra jest w stanie sprostać wymaganiom
-          naszych Klientów.
-        Wysoka jakość usług oraz terminowość sprawiają, że zaufało nam już wielu klientów.
-        Oferujemy szeroko zakres usług: transport drogowy, transport chłodniczy, transport krajowy oraz
-        międzynarodowy
-      </p>
-  </div>
-</div>
-  </div>
+
 
   <div class="parallax-3">
 
   </div>
 
-  <div class="content3">
-    <div style="  background-color: rgba(0, 0, 0, 0.5); width:100%; padding-left: 10%;
-    padding-right: 10%;">
 
-    <div class="information_center">
-      <!-- CAR
-      <div class="truck_line">
-          <img style="height:auto; width:100%;" src="images/white-truck.png" />
-      </div>
-    -->
-      <span class="information_text">
-       TECHNOLOGIA
-     </span>
-    </div>
-    <div class="content_txt">
-      <p>
-        W transporcie drogowym, na znaczeniu zyskują systemy, pozwalające informować poruszających się
-        pojazdami o wszelkich zdarzeniach i utrudnieniach na drodze mających wpływ na bezpieczeństwo jazdy.
-         Systemy te informują również o złych warunkach pogodowych, a generowane komunikaty, podróżujący
-         mogą odczytać w czasie rzeczywistym za pomocą elektronicznych tablic rozmieszczonych na wielu
-          trasach. Takie systemy, choć pozornie proste, kryją w sobie szereg algorytmów służących
-           gromadzeniu, analizowaniu i przekazywaniu danych. „Jeden z nich już niedługo będzie
-           udostępniał informacje o sytuacji na drogach podróżującym drogami ekspresowymi i autostradami
-            należącymi do transeuropejskiej sieci transportowej (TEN-T). Przygotujemy go na zlecenie
-            Generalnej Dyrekcji Dróg Krajowych i Autostrad.
-      </p>
-      </div>
-    </div>
-  </div>
 
   <div class="footer_up">
     <div class="container">

@@ -1,0 +1,350 @@
+
+
+  body, html {
+    height: 100%;
+    margin: 0px;
+    background-color: black;
+
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+
+  .start_information {
+    background-color: black;
+    border: 0px solid blue;
+    height: 80%;
+    position: fixed;
+    z-index: 9000;
+    margin:left;
+    top: 10%;
+    opacity: 0.9;
+    border-radius: 0px;
+    color: white;
+    padding: 10%;
+
+  }
+
+  .navbar-inverse {
+      background-color: #00022a;
+    }
+
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #0600ff;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    font-size: 30px;
+  }
+
+  .navbar-inverse .navbar-nav>li>a {
+      color: #0600ff;
+      font-size: 20px;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: #0600ff;
+        font-weight: bold;
+        font-size: 35px;
+        padding: 15px 20px;
+    }
+
+  .parallax-1, .parallax-2, .parallax-3 {
+    position: relative;
+    opacity: 9;
+    background-attachment: fixed; /* fixed */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:auto;
+
+  }
+
+  .parallax-1 {
+    background-image: url("../images/parallax1.jpg");
+    min-height: 70%;
+  }
+
+  .parallax-2 {
+    background-image: url("../images/parallax2.jpg");
+    min-height: 40%;
+  }
+
+  .parallax-3 {
+    background-image: url("../images/parallax3.jpg");
+    min-height: 40%;
+  }
+
+.partnerzy {
+  max-height:auto;
+  max-width: 100%;
+  opacity: 0.5;
+}
+
+.partnerzy:hover {
+  opacity: 1;
+}
+
+.truck_line {
+  position: absolute;
+  background-color: ;
+  max-width: 10%;
+  min-width: 70px;
+  bottom: 0px;
+  z-index: 1;
+
+}
+
+.information_div {
+  width: 100%;
+  background-color:;
+  color:yellow;
+  margin-bottom: 0px;
+}
+
+.information_center {
+  width: 100%;
+  position:relative;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color:black;
+  z-index:1;
+}
+
+.information_text {
+  padding: 16px;
+  border-color: ;
+  letter-spacing: 8px;
+  background-color: #00022a;
+  color:#8888ef;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+
+
+  }
+
+/* Nav change color on hoover*/
+.nav>li:hover {
+    position: relative;
+    display: block;
+    background-color: #0f1256;
+  }
+
+
+
+.content1, .content2, .content3, .content4 {
+  background-attachment: local;
+  -webkit-box-shadow: 0px 0px 31px 25px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 31px 25px rgba(0,0,0,1);
+  box-shadow: 0px 0px 31px 25px rgba(0,0,0,1);
+  background-position: center;
+  background-size: cover;
+
+
+
+}
+
+.content_txt>p {
+  margin:0;
+}
+
+.content1_list p {
+  margin:0;
+}
+
+.content_txt {
+  line-height: 150%;
+  font-size: 1.7vw;
+  background-color: ;
+  height: 100%;
+  color:blue;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color:rgba(255, 255, 255, 0.95);
+  position: relative;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+
+}
+
+.content1_list {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 0px;
+  list-style-type: none;
+  font-size: 1.2vw;
+
+}
+
+.content1_list a {
+  color: white;
+  text-decoration: none;
+
+
+}
+
+.content1_list li:hover {
+  color: #959597;
+  text-decoration: none;
+  margin:0;
+  padding: 0;
+  }
+
+
+
+
+.content1 {
+  background-image: url("../images/content1.jpg");
+}
+
+.content2 {
+  background-image: url("../images/content2.jpg");
+}
+
+.content3 {
+  background-image: url("../images/content3.jpg");
+}
+
+.content4 {
+  background-image: url("../images/content4.jpg");
+}
+
+.company_info {
+  margin:auto;
+  margin-top: 2%;
+  height: 100%;
+  width: 100%;
+
+}
+
+.company_name {
+  color: #0600ff;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 0px;
+
+}
+
+.company_address>p{
+  font-size: 14px;
+  padding: 0px;
+  margin:0;
+  color:#0600ff ;
+
+
+}
+
+.company_hr {
+  margin:0;
+  margin-bottom: 10px;
+  border:0;
+  height:1px;
+  bottom:1px;
+  width: 210px;
+  background-color: #0600ff;
+}
+
+.glyphicon-paperclip{
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.glyphicon-circle-arrow-right {
+  font-size:100% ;
+  color: #0600ff;
+  opacity: 0.2;
+}
+
+.company_map {
+  margin: 0;
+  border:0;
+  padding: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.footer_up {
+  height: auto;
+  width: 100%;
+  background-color: #00022a;
+  margin: auto;
+  border-top: 10px solid #0600ff;
+  display: block;
+}
+
+.footer_down {
+  height: 70px;
+  width: 100%;
+  background-color: #00022a;
+  display: block;
+}
+
+.footer-font {
+  color: #0600ff;
+  margin:auto;
+  height: 10%;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  padding-top: 5px;
+
+}
+
+/* Style z index */
+@media only screen and (max-width: 768px) {
+  .parallax-1 {
+    min-height: 100%;
+  }
+    /* For mobile phones: */
+
+  .content_txt {
+    font-size: 3.5vw;
+    background-color: ;
+    height: 100%;
+    width:auto;
+    color:blue;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color:rgba(255, 255, 255, 0.95);
+    position: relative;
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+
+  }
+
+
+
+.parallax-1, .parallax-2, .parallax-3 {
+  min-height: 40%;
+}
+
+.content1_list p {
+  padding-bottom: 0;
+  margin:0;
+}
+
+.content1_list {
+  padding: 0;
+  margin: 0px;
+  margin-left: 0px;
+  list-style-type: none;
+  font-size: 3vw;
+  text-align: left;
+}
+}
+/* END mobile phones */
+
+.navbar-zero-bottom {
+    margin-bottom: 0px;
+  }
