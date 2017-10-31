@@ -11,6 +11,11 @@
     box-sizing: border-box;
   }
 
+/* menu border color*/
+.navbar-inverse .navbar-collapse {
+    border-color: #000000;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+}
 
 
   .start_information {
@@ -30,21 +35,32 @@
 
   .navbar-inverse {
       background-color: #00022a;
+      -webkit-box-shadow: 0px 2px 16px 3px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 2px 16px 3px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+
+
     }
 
   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    color: #fff;
-    background-color: #0600ff;
+    color: #8888ef;
+    background-color: rgba(6, 0, 255, 0.08);
     font-family: 'Alegreya Sans SC', sans-serif;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-    font-size: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+ .navbar-inverse .navbar-nav>li>a:hover {
+    color: #8888ef;
   }
 
   .navbar-inverse .navbar-nav>li>a {
-      color: #0600ff;
+      color: rgb(70, 82, 150);
       font-size: 20px;
       font-family: 'Alegreya Sans SC', sans-serif;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+      transition: all 0.2s linear;
     }
 
     .navbar-inverse .navbar-brand {
@@ -53,6 +69,36 @@
         font-size: 35px;
         padding: 15px 20px;
     }
+    /* Nav change color on hoover*/
+    .nav>li:hover{
+        position: relative;
+        display: block;
+        background-color: #0f1256;
+        border-radius: 10px;
+        transition: ease 1s;
+      }
+
+
+
+  .row-partnerzy-bottom {
+    background-color:#0f1256;
+    border-bottom: 10px solid #0b0b28;
+    box-shadow: 0 0 100px rgba(1, 0, 0, 1);
+    margin-bottom: 30px;
+  }
+
+  .partnerzy {
+    max-width: 100%;
+    opacity: 0.5;
+    transition: .5s ease;
+  }
+
+  .partnerzy:hover {
+    opacity: 1;
+    transform: scale(1.1,1);
+  }
+
+
 
   .parallax-1, .parallax-2, .parallax-3 {
     position: relative;
@@ -62,12 +108,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin:auto;
+    box-shadow: 0px 0 100px rgba(1, 0, 0, 1);
+
 
   }
 
   .parallax-1 {
     background-image: url("../images/parallax1.jpg");
     min-height: 70%;
+
   }
 
   .parallax-2 {
@@ -80,15 +129,7 @@
     min-height: 40%;
   }
 
-.partnerzy {
-  max-height:auto;
-  max-width: 100%;
-  opacity: 0.5;
-}
 
-.partnerzy:hover {
-  opacity: 1;
-}
 
 .truck_line {
   position: absolute;
@@ -124,29 +165,156 @@
   background-color: #00022a;
   color:#8888ef;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 1);
 
 
   }
 
-/* Nav change color on hoover*/
-.nav>li:hover {
-    position: relative;
-    display: block;
-    background-color: #0f1256;
+
+.img_50 {
+  display: block;
+  width: 50%;
+  padding:0;
+  margin:0 auto;
+  border-radius: 10px;
+  margin:2%;
+  margin-top: 1%;
+  transition: 0.2s ease;
+
+}
+.img_shadow{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.img_50:hover {
+  transform: scale(1.02,1.02);
+}
+
+
+
+.img_30 {
+  display: block;
+  width: 30%;
+  height: auto;
+  padding:0;
+  border-radius: 5px;
+  margin:1%;
+  transition:  0.2s ease;
+}
+
+.img_30:hover {
+  transform: scale(1.02,1.02);
+}
+
+.img_width_100 {
+  width: 100%;
+  margin:auto;
+  
+  padding: 0%;
+}
+
+.img_gallery {
+  position: relative;
+  width: 200%;
+  height: auto;
+  display: flex;
+  z-index: 10;
+}
+
+.margin_0 {
+  margin:0;
+}
+
+/* Gallery photo */
+div.photo_gallery {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+div.photo_describe {
+  text-align: left;
+  padding: 2% 5%;
+  font-size: 12px;
+  text-shadow: 0 0 0 0;
+}
+
+
+.photo_describe p {
+  text-shadow: none;
+  font-size: 14px;
+  margin: auto;
+  line-height: 110%;
+  color: rgba(255,255,255, 0.7);
+  margin-bottom: 1%;
+
+}
+#photo_header {
+  text-shadow: none;
+  color: rgba(255,255,255, 1);
+  font-size: 20px;
+  margin: auto;
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+
+.photo_gallery {
+
+  width: 100%;
+  opacity: 0.85;
+}
+
+
+.photo_gallery:hover {
+  opacity: 1;
+}
+
+.photo_gallery:hover .car_img{
+  opacity: 0.8;
+}
+
+
+.photo_gallery:hover .img_overly{
+  opacity: 1;
+}
+
+.car_img {
+  opacity: 1;
+  display: block;
+  transition: 1s ease;
+
+}
+
+.img_overly {
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  /*transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);*/
+  transition: 0.5s ease;
+
+}
+.img_text {
+  background-color: #4CAF50;
+  display: block;
+  width: auto;
+  height: auto;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
   }
 
-
+/* END GALLERY */
 
 .content1, .content2, .content3, .content4 {
-  background-attachment: local;
-  -webkit-box-shadow: 0px 0px 31px 25px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 0px 31px 25px rgba(0,0,0,1);
-  box-shadow: 0px 0px 31px 25px rgba(0,0,0,1);
+  background-attachment: fixed; /*slide effect */
   background-position: center;
   background-size: cover;
-
-
-
 }
 
 .content_txt>p {
@@ -160,7 +328,7 @@
 .content_txt {
   line-height: 150%;
   font-size: 1.7vw;
-  background-color: ;
+  background-color:  ;
   height: 100%;
   color:blue;
   padding-top: 30px;
@@ -236,8 +404,17 @@
   font-size: 14px;
   padding: 0px;
   margin:0;
-  color:#0600ff ;
+  color:#61607e ;
+  transition: all 1s linear;
+}
 
+.column_cn{
+  width: 220px;
+  transition: 0.1s ease;
+}
+
+.column_cn:hover{
+  transform: scale(1.05 , 1.05   );
 
 }
 
@@ -248,7 +425,7 @@
   height:1px;
   bottom:1px;
   width: 210px;
-  background-color: #0600ff;
+  background-color: #61607e;
 }
 
 .glyphicon-paperclip{
@@ -259,7 +436,7 @@
 
 .glyphicon-circle-arrow-right {
   font-size:100% ;
-  color: #0600ff;
+  color: #61607e;
   opacity: 0.2;
 }
 
@@ -270,6 +447,8 @@
   display: block;
   height: 100%;
   width: 100%;
+  margin-bottom: 15px;
+  margin-top:15px;
 }
 
 .footer_up {
@@ -277,25 +456,28 @@
   width: 100%;
   background-color: #00022a;
   margin: auto;
-  border-top: 10px solid #0600ff;
+  border-top: 10px solid rgba(136, 136, 239, 0.15);
   display: block;
 }
 
 .footer_down {
   height: 70px;
   width: 100%;
-  background-color: #00022a;
+  background-color: rgb(7, 8, 44);
   display: block;
+  -webkit-box-shadow: 0px 1px 28px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 28px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 28px 3px rgba(0,0,0,0.75);
+  border-top: 1px dotted black;
 }
 
 .footer-font {
-  color: #0600ff;
-  margin:auto;
-  height: 10%;
+  color: #61607e;
   font-size: 15px;
   text-align: center;
   font-family: 'Alegreya Sans SC', sans-serif;
-  padding-top: 5px;
+  padding-top: 25px;
+
 
 }
 
@@ -342,6 +524,12 @@
   font-size: 3vw;
   text-align: left;
 }
+
+.photo_gallery {
+  width: 100%;
+  opacity: 1;
+}
+
 }
 /* END mobile phones */
 
