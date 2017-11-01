@@ -21,37 +21,39 @@
 		$message = $_POST['message'];
 		$human = intval($_POST['human']);
 		$from = 'Demo Contact Form';
-		$to = 'asdasd@asdasdasdasdasd11212.pl';
-		$subject = 'Message from Contact Demo ';
+		$to = 'tomaszparfieniuk@gmail.com';
+		$subject = 'LuxTrans web wiadomosc ';
 
 		$body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
 		// Check if name has been entered
 		if (!$_POST['name']) {
-			$errName = 'Please enter your name';
+			$errName = 'Podaj Imię';
+
 		}
 
 		// Check if email has been entered and is valid
 		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = 'Please enter a valid email address';
+			$errEmail = 'Podaj swój adres email';
 		}
 
 		//Check if message has been entered
 		if (!$_POST['message']) {
-			$errMessage = 'Please enter your message';
+			$errMessage = 'Wpisz wiadomość';
 		}
 		//Check if simple anti-bot test is correct
 		if ($human !== 5) {
-			$errHuman = 'Your anti-spam is incorrect';
+			$errHuman = 'Wpisano niepoprawny wynik';
 		}
 
 		// If there are no errors, send the email
 		if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 			mail($to, $subject, $message, $from);
-			$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+			$result='<div> <p class="form_alerts">
+			Dziękujemy. Wiadomość została wysłana. Odezwiemy się najszybciej jak to możliwe.</p></div>';
 			}
 		else {
-			$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+			$result='<div> <p class="form_alerts_red" style="font-size:20px;"> Uzupełnij wszystkie pola i wyślij ponownie.</p></div>';
 			}
 
 			}

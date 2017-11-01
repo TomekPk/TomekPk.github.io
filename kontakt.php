@@ -117,15 +117,15 @@ $(document).ready(function() {
 
         <!-- Deklaracje php -->
 
+        <!-- htmlspecialchars () function avoid exploits -->
+        <form class="form-horizontal" role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-        <form class="form-horizontal" role="form" method="post" action="kontakt.php">
-          <!-- action index.php or index.html for use? -->
         	<div class="form-group"> <!--  form-groupIts only purpose is to provide margin-bottom-->
         		<label for="name" class="col-sm-2 control-label">Imię</label>
         		<div class="col-sm-10">
         			<input type="text" class="form-control" id="name" name="name" placeholder="Imię i Nazwisko"
-                value="">
-                <?php echo "<p class='text-danger'>$errName</p>";?>
+                value="<?php echo isset($_POST["name"]) ? $_POST["name"] : ''; ?>">
+                <?php echo "<p class='form_alerts_red'>$errName</p>";?>
             </div>
         	</div>
 
@@ -133,16 +133,16 @@ $(document).ready(function() {
         		<label for="email" class="col-sm-2 control-label">Twój Email</label>
         		<div class="col-sm-10">
         			<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com"
-                value="">
-              <?php echo "<p class='text-danger'>$errEmail</p>";?>
+                value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>">
+              <?php echo "<p class='form_alerts_red'>$errEmail</p>";?>
             </div>
         	</div>
 
         	<div class="form-group">
         		<label for="message" class="col-sm-2 control-label">Wiadomość</label>
         		<div class="col-sm-10">
-        			<textarea class="form-control" rows="10" name="message"></textarea>
-              <?php echo "<p class='text-danger'>$errMessage</p>";?>
+        			<textarea class="form-control" rows="10" name="message"><?php echo isset($_POST["message"]) ? $_POST["message"] : ''; ?></textarea>
+              <?php echo "<p class='form_alerts_red'>$errMessage</p>";?>
             </div>
         	</div>
 
@@ -150,22 +150,24 @@ $(document).ready(function() {
         		<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
         		<div class="col-sm-10">
         			<input type="text" class="form-control" id="human" name="human" placeholder="Twoja odpowiedź">
-              <?php echo "<p class='text-danger'>$errHuman</p>";?>
+              <?php echo "<p class='form_alerts_red'>$errHuman</p>";?>
         		</div>
         	</div>
 
+          <div class="form-group">
+        		<div class="col-sm-10 col-sm-offset-2">
+        			<!-- Will be used to display an alert to the user-->
+
+              <?php echo $result; ?>
+        		</div>
+        	</div>
         	<div class="form-group">
         		<div class="col-sm-10 col-sm-offset-2">
         			<input id="submit" name="submit" type="submit" value="Wyślij" class="btn btn-primary">
         		</div>
         	</div>
 
-        	<div class="form-group">
-        		<div class="col-sm-10 col-sm-offset-2">
-        			<!-- Will be used to display an alert to the user-->
-              <?php echo $result; ?>
-        		</div>
-        	</div>
+
 
         </form>
 
