@@ -590,3 +590,103 @@ div.photo_describe {
 .text_center {
   text-align: center;
 }
+
+
+
+
+
+/* Modal gallery */
+
+#myImg {
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: auto;
+    height: 150px;
+    margin: 4px;
+    margin-top: 4px;
+    text-align: left;
+
+
+}
+
+#myImg:hover {opacity: 0.85;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    border: 0 0 0 0;
+    padding: 0;
+    box-shadow: none;
+    background-color: #000;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+      }
+        #myImg {
+            border-radius: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            height: auto;
+            margin: 1px;
+            margin-top: 2px;
+            text-align: left;
+
+        }
+
+}
+/* END Modal gallery*/
