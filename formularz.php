@@ -28,32 +28,33 @@
 
 		// Check if name has been entered
 		if (!$_POST['name']) {
-			$errName = 'Podaj Imię';
+			$errName = '<span class="glyphicon glyphicon-exclamation-sign form_alerts_red"></span> Podaj Imię';
 
 		}
 
 		// Check if email has been entered and is valid
 		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = 'Podaj swój adres email';
+			$errEmail = '<span class="glyphicon glyphicon-exclamation-sign form_alerts_red"></span> Podaj swój adres email';
 		}
 
 		//Check if message has been entered
 		if (!$_POST['message']) {
-			$errMessage = 'Wpisz wiadomość';
+			$errMessage = '<span class="glyphicon glyphicon-exclamation-sign form_alerts_red"></span> Wpisz wiadomość';
 		}
 		//Check if simple anti-bot test is correct
 		if ($human !== 5) {
-			$errHuman = 'Wpisano niepoprawny wynik';
+			$errHuman = '<span class="glyphicon glyphicon-exclamation-sign form_alerts_red"></span> Wpisano niepoprawny wynik';
 		}
 
 		// If there are no errors, send the email
 		if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 			mail($to, $subject, $message, $from);
 			$result='<div> <p class="form_alerts">
+			<span class="glyphicon glyphicon-info-sign form_alerts"></span>
 			Dziękujemy. Wiadomość została wysłana. Odezwiemy się najszybciej jak to możliwe.</p></div>';
 			}
 		else {
-			$result='<div> <p class="form_alerts_red" style="font-size:20px;"> Uzupełnij wszystkie pola i wyślij ponownie.</p></div>';
+			$result='<div> <p class="form_alerts_red" style="font-size:20px;"><span class="glyphicon glyphicon-info-sign form_alerts_red"></span> Uzupełnij wszystkie pola i wyślij ponownie.</p></div>';
 			}
 
 			}

@@ -63,10 +63,10 @@ $(document).ready(function() {
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <!-- BUTTONS -->
-                <li><a href="ofirmie.html">O FIRMIE</a></li>
+                <li ><a href="ofirmie.html">O FIRMIE</a></li>
                 <li><a href="flota.html">FLOTA</a></li>
-                <li><a href="galeria.html">GALERIA</a></li>
-                <li class="active"><a href="kontakt.php">KONTAKT</a></li>
+                <li class="active"><a href="galeria.html">GALERIA</a></li>
+                <li><a href="kontakt.php">KONTAKT</a></li>
               </ul>
 
           </div>
@@ -106,7 +106,7 @@ $(document).ready(function() {
 
         <div class="information_center">
           <span class="information_text">
-           KONTAKT
+           GALERIA
          </span>
         </div>
 
@@ -115,69 +115,14 @@ $(document).ready(function() {
 
       <div class="content_txt">
 
-        <!-- Deklaracje php -->
+      <!-- ZAWARTOŚĆ -->
 
-        <!-- htmlspecialchars () function avoid exploits -->
-        <form class="form-horizontal" role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+      <p style="text-indent: 50px;">
+      AKTUALIZACJA
 
-        	<div class="form-group"> <!--  form-groupIts only purpose is to provide margin-bottom-->
-        		<label for="name" class="col-sm-2 control-label">Imię</label>
-        		<div class="col-sm-10">
-        			<input type="text" class="form-control" id="name" name="name" placeholder="Imię i Nazwisko"
-                value="<?php echo isset($_POST["name"]) ? $_POST["name"] : ''; ?>">
-                <p class="form_alerts_red" style="margin-top:4px;">
-                  <?php echo "$errName";?>
-                </p>
-            </div>
-        	</div>
-
-        	<div class="form-group">
-        		<label for="email" class="col-sm-2 control-label">Twój Email</label>
-        		<div class="col-sm-10">
-        			<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com"
-                value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>">
-                <p class="form_alerts_red" style="margin-top:4px;">
-                  <?php echo "$errEmail";?>
-                </p>
-            </div>
-        	</div>
-
-        	<div class="form-group">
-        		<label for="message" class="col-sm-2 control-label">Wiadomość</label>
-        		<div class="col-sm-10">
-        			<textarea class="form-control" rows="10" name="message"><?php echo isset($_POST["message"]) ? $_POST["message"] : ''; ?></textarea>
-              <p class="form_alerts_red" style="margin-top:4px;">
-                <?php echo "$errMessage";?>
-              </p>
-            </div>
-        	</div>
-
-        	<div class="form-group">
-        		<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-        		<div class="col-sm-10">
-        			<input type="text" class="form-control" id="human" name="human" placeholder="Twoja odpowiedź">
-              <p class="form_alerts_red" style="margin-top:4px;">
-                <?php echo "$errHuman";?>
-              </p>
-        		</div>
-        	</div>
-
-          <div class="form-group">
-        		<div class="col-sm-10 col-sm-offset-2">
-        			<!-- Will be used to display an alert to the user-->
-
-              <?php echo $result; ?>
-        		</div>
-        	</div>
-        	<div class="form-group">
-        		<div class="col-sm-10 col-sm-offset-2">
-        			<input id="submit" name="submit" type="submit" value="Wyślij" class="btn btn-primary">
-        		</div>
-        	</div>
+      </p>
 
 
-
-        </form>
 
 
       </div>
