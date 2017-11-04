@@ -171,10 +171,9 @@
   }
 
 
-
-.img_shadow{
-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1), 0 2px 4px 0 rgba(0, 0, 0, 1);
-}
+.img_shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1), 0 2px 4px 0 rgba(0, 0, 0, 1);
+  }
 
 
 .img_30 {
@@ -531,7 +530,9 @@ div.photo_describe {
 
 }
 
-/* Style z index */
+/* ----------------------------------------------------*/
+/*--------------------MEDIA max 768px-------------------*/
+/* ----------------------------------------------------*/
 @media only screen and (max-width: 768px) {
   .parallax-1 {
     min-height: 100%;
@@ -557,30 +558,56 @@ div.photo_describe {
 
 
 
-.parallax-1, .parallax-2, .parallax-3 {
-  min-height: 40%;
-}
+  .parallax-1, .parallax-2, .parallax-3 {
+    min-height: 40%;
+  }
 
-.content1_list p {
-  padding-bottom: 0;
-  margin:0;
-}
+  .content1_list p {
+    padding-bottom: 0;
+    margin:0;
+  }
 
-.content1_list {
-  padding: 0;
-  margin: 0px;
-  margin-left: 0px;
-  list-style-type: none;
-  font-size: 3vw;
-  text-align: left;
-}
+  .content1_list {
+    padding: 0;
+    margin: 0px;
+    margin-left: 0px;
+    list-style-type: none;
+    font-size: 3vw;
+    text-align: left;
+  }
 
-.photo_gallery {
-  width: 100%;
-  opacity: 1;
-}
+  .photo_gallery {
+    width: 100%;
+    opacity: 1;
+  }
 
-}
+
+
+  /* Modal gallery*/
+  .modal-content {
+      width: 100%;
+    }
+
+  #myImg {
+      border-radius: 2px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      height: auto;
+      margin: 1px;
+      margin-top: 2px;
+      text-align: left;
+    }
+
+  .img_50, .img_30 {
+    width: 100%;
+    height: auto;
+    }
+
+
+  }
+
+/* END Modal gallery*/
 /* END mobile phones */
 
 .navbar-zero-bottom {
@@ -590,9 +617,6 @@ div.photo_describe {
 .text_center {
   text-align: center;
 }
-
-
-
 
 
 /* Modal gallery */
@@ -668,25 +692,3 @@ div.photo_describe {
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
-
-
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-      }
-        #myImg {
-            border-radius: 2px;
-            cursor: pointer;
-            transition: 0.3s;
-            width: 100%;
-            height: auto;
-            margin: 1px;
-            margin-top: 2px;
-            text-align: left;
-
-        }
-
-}
-/* END Modal gallery*/
